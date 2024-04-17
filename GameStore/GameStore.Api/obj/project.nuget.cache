@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X3fHrtuiEsDCB7QJLl3maS7oRCGGi5nTiva9ZxCHcNwlgRjgOj5LOI2Pb/o6B6RqF3rV9Dbbjvpjz8w7GhHHmQ==",
+  "dgSpecHash": "eZm1temWMqp/Vt2stPft4glx8pazk6QPkNFID1HAUlP9YVbCEzGmSbL7iPvybmh3u9y4hwwaWd1xnz0XhqL8QQ==",
   "success": true,
-  "projectFilePath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+  "projectFilePath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
