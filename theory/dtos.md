@@ -17,3 +17,10 @@
 > And records reduce the boilerplate code that is typically associated with class definitions intended for data holding
 * penggunaan DTOs membantu mengurangi jumlah kode yang diperlukan untuk mendefinisikan kelas yang digunakan untuk menyimpan data, yang sering kali menjadi lebih kompleks dan membutuhkan lebih banyak boilerplate code jika tidak menggunakan DTOs. 
 * Dengan menggunakan DTOs, pengembang dapat lebih fokus pada logika bisnis inti daripada menghabiskan waktu untuk menulis kode repetitif.
+
+
+### Payload
+* Payload adalah bagian dari data yang dikirimkan dalam suatu pesan atau permintaan, seperti dalam protokol komunikasi seperti HTTP, TCP, atau protokol lainnya. 
+* Payload mengandung informasi yang sebenarnya ingin Anda kirim atau terima, seperti teks pesan, file, atau data lainnya.
+* Sebagai contoh, dalam protokol HTTP, payload dapat berupa konten dari permintaan POST atau PUT, yang berisi data yang ingin Anda kirimkan ke server.
+* Dalam konteks pengembangan web, payload sering kali mengacu pada data JSON atau XML yang dikirimkan melalui API untuk berkomunikasi antara aplikasi klien dan server.
