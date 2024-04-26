@@ -69,4 +69,5 @@ or use terminal: `cd GameStore.Api` > `dotnet run`
 
 
 ## Packages:
-* https://www.nuget.org/ for filtering API and can combine with data annotation to handle invalid input
+* https://www.nuget.org/packages/MinimalApis.Extensions for filtering API and can combine with data annotation to handle invalid input
+* https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/9.0.0-preview.3.24172.4 for ORM Sqlite
