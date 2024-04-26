@@ -14,7 +14,8 @@ public static class GamesEndpoints
 
     public static RouteGroupBuilder MapGamesEndpoints(this WebApplication app) {
 
-        var group = app.MapGroup("games");
+        var group = app.MapGroup("games")
+                        .WithParameterValidation(); // apply to all endpoints.
 
         // GET /games
         group.MapGet("/", () => games);
@@ -29,6 +30,7 @@ public static class GamesEndpoints
 
         // POST /games
         group.MapPost("/", (CreateGameDto newGame) => {
+
             GameDto game = new (
                 games.Count + 1,
                 newGame.Name,
@@ -41,6 +43,8 @@ public static class GamesEndpoints
 
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game);
         });
+        // .WithParameterValidation(); // will recognized the data annotation in CreateGameDto
+        // but we can also apply for all endpoints in the group variables
 
         // PUT /games/1
         group.MapPut("/{id}", (int id, UpdateGameDto updatedGame) => {

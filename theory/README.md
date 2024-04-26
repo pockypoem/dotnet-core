@@ -66,3 +66,7 @@ If you want to run your app without debugging session: <br>
 ![Image](./images/04-without-debugging.png) 
 
 or use terminal: `cd GameStore.Api` > `dotnet run`
+
+
+## Packages:
+* https://www.nuget.org/ for filtering API and can combine with data annotation to handle invalid input
