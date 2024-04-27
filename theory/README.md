@@ -71,3 +71,18 @@ or use terminal: `cd GameStore.Api` > `dotnet run`
 ## Packages:
 * https://www.nuget.org/packages/MinimalApis.Extensions for filtering API and can combine with data annotation to handle invalid input
 * https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Sqlite/9.0.0-preview.3.24172.4 for ORM Sqlite
+* https://www.nuget.org/packages/dotnet-ef/8.0.2
+* https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/8.0.2
+
+
+## For migration
+Make sure you're in GameStore.Api
+* `dotnet ef migrations add InitialCreate --output-dir Data\Migrations`
+* execute migration: `dotnet ef database update`
+* database will create
+* create Data Extensions to automatically migrate up database when the app start running
+* delete the db that we create before
+* run again the app `dotnet run` to test that our automatic script for migration is succeed
+
+Penambahan `"Microsoft.EntityFrameworkCore.Database.Command": "Warning"` pada appsettings.json artinya:
+* Dari command `Microsoft.EntityFrameworkCore.Database.Command` tolong hanya tampilkan ketika ada warning atau error atau something critical, don't show me information messages (nanti logging messages nya jadi terlalu banyak) 
