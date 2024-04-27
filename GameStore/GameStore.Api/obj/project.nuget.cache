@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8kwpcMJ6HYV1vNvjUlTGMv2lArqj+fzaY1+JChl72K5/YQjB+DNtSMSLK/krx8PaaiwK4/qdQA5h4JZe9b5/XA==",
+  "dgSpecHash": "QZO3xoSQo3DqzQ9xCAdna+7ctbre2eXCG3OjVN3X+hodr5AVtHzYfjjovETNo3oEA1OdQ+Nsf19UEAC3rkOlmg==",
   "success": true,
-  "projectFilePath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+  "projectFilePath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jeremyas Cornelis\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.2\\microsoft.data.sqlite.core.8.0.2.nupkg.sha512",
     "C:\\Users\\Jeremyas Cornelis\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.2\\microsoft.entityframeworkcore.8.0.2.nupkg.sha512",

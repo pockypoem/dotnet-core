@@ -23,3 +23,15 @@ Entities folder represent our data model
 
 Kegunaan `GameStoreContext`: <br>
 ![Image](./images/20-game-store-context.png)
+
+
+# The ASP.NET Core Configuration System
+```csharp
+var connString = "Data Source=GameStore.db"; // path location for sqlite db file
+
+// register service
+builder.Services.AddSqlite<GameStoreContext>(connString);
+```
+
+is not ideal to store connection string directly like that. There is betterway to store connection string: <br>
+![Image](./images/21-better-way.png)

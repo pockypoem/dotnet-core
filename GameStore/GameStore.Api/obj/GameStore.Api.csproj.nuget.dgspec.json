@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {}
+    "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {}
   },
   "projects": {
-    "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {
+    "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+        "projectUniqueName": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
         "projectName": "GameStore.Api",
-        "projectPath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+        "projectPath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
         "packagesPath": "C:\\Users\\Jeremyas Cornelis\\.nuget\\packages\\",
-        "outputPath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\obj\\",
+        "outputPath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jeremyas Cornelis\\AppData\\Roaming\\NuGet\\NuGet.Config",
