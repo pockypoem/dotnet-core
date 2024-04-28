@@ -86,3 +86,9 @@ Make sure you're in GameStore.Api
 
 Penambahan `"Microsoft.EntityFrameworkCore.Database.Command": "Warning"` pada appsettings.json artinya:
 * Dari command `Microsoft.EntityFrameworkCore.Database.Command` tolong hanya tampilkan ketika ada warning atau error atau something critical, don't show me information messages (nanti logging messages nya jadi terlalu banyak) 
+
+
+## For seeding data
+* Add method for seeder Genre `OnModelCreating`
+* in terminal: `dotnet ef migrations add SeedGenres --output-dir Data\Migrations`
+* `dotner run` to see the new migration has applied
