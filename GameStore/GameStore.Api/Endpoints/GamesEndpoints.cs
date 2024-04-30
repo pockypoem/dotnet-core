@@ -1,6 +1,7 @@
 ﻿using GameStore.Api.Data;
 using GameStore.Api.Dtos;
 using GameStore.Api.Entities;
+using GameStore.Api.Mapping;
 
 namespace GameStore.Api.Endpoints;
 
@@ -33,27 +34,14 @@ public static class GamesEndpoints
         // POST /games
         group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) => {
 
-            Game game = new() {
-                Name = newGame.Name,
-                Genre = dbContext.Genres.Find(newGame.GenreId),
-                GenreId = newGame.GenreId,
-                Price = newGame.Price,
-                ReleaseDate = newGame.ReleaseDate
-            };
+            Game game = newGame.ToEntity();
+            game.Genre = dbContext.Genres.Find(newGame.GenreId);
 
             dbContext.Games.Add(game);
             dbContext.SaveChanges(); // transform all of the changes that have been tracked by Entity Framework 
             // and translates that into whatever SQL statements needs to be executed into database to insert the new record into the table games
-            
-            GameDto gameDto = new (
-                game.Id,
-                game.Name,
-                game.Genre!.Name, // genre never been null
-                game.Price,
-                game.ReleaseDate
-            );
 
-            return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, gameDto);
+            return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game.ToDto());
         });
         // .WithParameterValidation(); // will recognized the data annotation in CreateGameDto
         // but we can also apply for all endpoints in the group variables
