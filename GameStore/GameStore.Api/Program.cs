@@ -16,8 +16,9 @@ var app = builder.Build();
 
 
 app.MapGamesEndpoints();
+app.MapGenresEndpoints();
 
-app.MigrateDb();
+await app.MigrateDbAsync(); // wait for the task to complete before moving on to the next thing
 
 
 

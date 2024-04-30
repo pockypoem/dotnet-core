@@ -16,27 +16,28 @@ public static class GamesEndpoints
                         .WithParameterValidation(); // apply to all endpoints.
 
         // GET /games
-        group.MapGet("/", (GameStoreContext dbContext) => 
-            dbContext.Games
+        group.MapGet("/", async (GameStoreContext dbContext) => 
+            await dbContext.Games
                     .Include(game => game.Genre) // to prevent N + 1 Problem
                     .Select(game => game.ToGameSummaryDto())
-                    .AsNoTracking()); // don't need tracking of the return entities, just send them back to client
+                    .AsNoTracking() // don't need tracking of the return entities, just send them back to client
+                    .ToListAsync()); 
 
         // GET /games/1
-        group.MapGet("/{id}", (int id, GameStoreContext dbContext) => {
-            Game? game = dbContext.Games.Find(id);
+        group.MapGet("/{id}", async (int id, GameStoreContext dbContext) => {
+            Game? game = await dbContext.Games.FindAsync(id);
 
             return game is null ? Results.NotFound() : Results.Ok(game.ToGameDetailsDto());
         })
         .WithName(GetGameEndpointName);
 
         // POST /games
-        group.MapPost("/", (CreateGameDto newGame, GameStoreContext dbContext) => {
+        group.MapPost("/", async (CreateGameDto newGame, GameStoreContext dbContext) => {
 
             Game game = newGame.ToEntity();
 
             dbContext.Games.Add(game);
-            dbContext.SaveChanges(); // transform all of the changes that have been tracked by Entity Framework 
+            await dbContext.SaveChangesAsync(); // transform all of the changes that have been tracked by Entity Framework 
             // and translates that into whatever SQL statements needs to be executed into database to insert the new record into the table games
 
             return Results.CreatedAtRoute(GetGameEndpointName, new { id = game.Id }, game.ToGameDetailsDto());
@@ -45,8 +46,8 @@ public static class GamesEndpoints
         // but we can also apply for all endpoints in the group variables
 
         // PUT /games/1
-        group.MapPut("/{id}", (int id, UpdateGameDto updatedGame, GameStoreContext dbContext) => {
-            var existingGame = dbContext.Games.Find(id);
+        group.MapPut("/{id}", async (int id, UpdateGameDto updatedGame, GameStoreContext dbContext) => {
+            var existingGame = await dbContext.Games.FindAsync(id);
 
             if (existingGame is null) {
                 return Results.NotFound();
@@ -57,18 +58,18 @@ public static class GamesEndpoints
                     .CurrentValues
                     .SetValues(updatedGame.ToEntity(id));
 
-            dbContext.SaveChanges(); 
+            await dbContext.SaveChangesAsync(); 
 
             return Results.NoContent(); 
         });
 
         // DELETE /games/1
-        group.MapDelete("/{id}", (int id, GameStoreContext dbContext) => {
+        group.MapDelete("/{id}", async (int id, GameStoreContext dbContext) => {
             
             // batch delete for efficiency memory
-            dbContext.Games
+            await dbContext.Games
                 .Where(game => game.Id == id)
-                .ExecuteDelete();
+                .ExecuteDeleteAsync();
 
             return Results.NoContent();
         });
