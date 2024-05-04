@@ -31,3 +31,4 @@ https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
 
 ## Styling with bootstrap
 * https://getbootstrap.com/
+* [ASP.NET Core Razor Component Lifecycle](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/lifecycle?view=aspnetcore-8.0)
