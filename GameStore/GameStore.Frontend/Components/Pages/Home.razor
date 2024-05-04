@@ -1,14 +1,15 @@
 ﻿@page "/"
 @using Models;
+@using System.Globalization
 
 <PageTitle>Game Catalog</PageTitle>
 
-<table>
-    <thead>
+<table class="table table-striped table-bordered table-hover">
+    <thead class="table-dark">
         <th>Id</th>
         <th>Name</th>
         <th>Genre</th>
-        <th>Price</th>
+        <th class="text-end">Price</th>
         <th>Release Date</th>
         <th></th>
     </thead>
@@ -18,10 +19,10 @@
                 <td>@game.Id</td>
                 <td>@game.Name</td>
                 <td>@game.Genre</td>
-                <td>@game.Price</td>
+                <td class="text-end">@game.Price.ToString("C2", CultureInfo.CreateSpecificCulture("en-US"))</td>
                 <td>@game.ReleaseDate</td>
                 <td>
-                    
+
                 </td>
             </tr>
         }

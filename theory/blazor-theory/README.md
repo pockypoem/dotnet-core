@@ -27,3 +27,7 @@ https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
 ## Software prerequisites
 * .NET SDK
 * Visual Studio Code
+
+
+## Styling with bootstrap
+* https://getbootstrap.com/
