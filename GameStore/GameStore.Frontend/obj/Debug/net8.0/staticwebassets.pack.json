@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css",
+      "Id": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css",
       "PackagePath": "staticwebassets\\GameStore.Frontend.bundle.scp.css"
     },
     {
-      "Id": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\app.css",
+      "Id": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
     {
