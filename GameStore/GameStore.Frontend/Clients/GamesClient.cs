@@ -84,6 +84,13 @@ public class GamesClient
     }
 
 
+    public void DeleteGame(int id) {
+        var game = GetGameSummaryById(id);
+
+        games.Remove(game); // remove from our current list
+    }
+
+
 
 
     // HELPER METHODS
