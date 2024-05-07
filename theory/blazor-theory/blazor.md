@@ -22,6 +22,11 @@
 * `app.UseStaticFiles();` adalah metode yang digunakan dalam ASP.NET Core untuk menambahkan middleware yang memungkinkan server web untuk menyajikan file statis seperti gambar, file CSS, file JavaScript, dan file lainnya kepada pengguna.
 * `app.MapRazorComponents<App>();` adalah metode yang digunakan dalam Blazor untuk menambahkan routing untuk komponen Razor yang didefinisikan dalam aplikasi.
 
+
+## Razor Component Life Cycle
+![Image](/images/08-bout-razor-component-lifecycle.png)
+
+
 ## Fyi about Blazor
 Blazor mengkompilasi kode C# Anda menjadi WebAssembly saat aplikasi dimuat di browser. Hal ini memungkinkan Anda menulis kode C# yang menjalankan logika aplikasi Anda langsung di browser tanpa memerlukan JavaScript.
 

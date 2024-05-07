@@ -30,7 +30,11 @@ else {
                     <td class="text-end">@game.Price.ToString("C2", CultureInfo.CreateSpecificCulture("en-US"))</td>
                     <td>@game.ReleaseDate</td>
                     <td>
-
+                        <div>
+                            <a href="@GameUrl(game.Id)" class="btn btn-primary me-2" role="button">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             }
@@ -46,4 +50,6 @@ else {
     protected override void OnInitialized() {
         games = Client.GetGames();
     }
+
+    private static string GameUrl(int id) => $"/editgame/{id}";
 }
