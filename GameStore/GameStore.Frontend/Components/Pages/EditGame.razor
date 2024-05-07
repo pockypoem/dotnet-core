@@ -1,12 +1,16 @@
 ﻿@page "/editgame"
+@* your razor component can have more than one route *@
+@page "/editgame/{id:int}"
+
+
 @inject NavigationManager NavigationManager
 @inject GamesClient GamesClient
 @inject GenresClient GenresClient
 
-<PageTitle>New Game</PageTitle>
-<h3>New Game</h3>
+<PageTitle>@title</PageTitle>
+<h3>@title</h3>
 
-@if (genres is null) {
+@if (genres is null || game is null) {
     <p><em>Loading....</em></p>
 } else {
     <div class="row">
@@ -49,23 +53,53 @@
 
 
 @code {
+    [Parameter]
+    public int? Id { get; set; }
+
     // it is going to populate this game object with all of the data entered by the user
     [SupplyParameterFromForm]
-    private GameDetails game { get; set; } = new () 
-    {
-        Name = string.Empty,
-        ReleaseDate = DateOnly.FromDateTime(DateTime.UtcNow)
-    };
-
+    private GameDetails? game { get; set; } 
 
     private Genre[]? genres;
+
+    private string title = string.Empty;
+
+    // to determines what to do depending on if we have an id or not
+    protected override void OnParametersSet() {
+
+        // it means that it was posted by the user after save
+        if (game is not null) {
+            // no need to load or to prepare a new instance of the game
+            // just have to let it get submitted
+            return;
+        }
+
+        if (Id is not null) {
+            game = GamesClient.GetGame(Id.Value);
+            title = $"Edit {game.Name}";
+        } else {
+            game = new() {
+                Name = string.Empty,
+                ReleaseDate = DateOnly.FromDateTime(DateTime.UtcNow)
+            };
+            title = "New Game";
+        }
+    }
 
     protected override void OnInitialized() {
         genres = GenresClient.GetGenres();
     }
 
     private void HandleSubmit() {
-        GamesClient.AddGame(game);
+        ArgumentNullException.ThrowIfNull(game);
+
+        if (Id is null) {
+            GamesClient.AddGame(game);
+        } else {
+            game.Id = Id.Value;
+            GamesClient.UpdateGame(game);
+        }
+
         NavigationManager.NavigateTo("/");
     }
 }

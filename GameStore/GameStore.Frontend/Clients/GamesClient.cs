@@ -33,15 +33,12 @@ public class GamesClient
 
     public GameSummary[] GetGames() => [.. games];
 
-    public void AddGame(GameDetails game) {
+    public void AddGame(GameDetails game)
+    {
+        Genre genre = GetGenreById(game.GenreId);
 
-        // to make sure if genreId is null, we're just throw an exception & there's no way to go to the next line
-        ArgumentException.ThrowIfNullOrWhiteSpace(game.GenreId);
-
-        // find genre in genres collection
-        var genre = genres.Single(genre => genre.Id == int.Parse(game.GenreId));
-
-        var gameSummary = new GameSummary {
+        var gameSummary = new GameSummary
+        {
             Id = games.Count + 1,
             Name = game.Name,
             Genre = genre.Name,
@@ -50,5 +47,59 @@ public class GamesClient
         };
 
         games.Add(gameSummary);
+    }
+
+
+    public GameDetails GetGame(int id)
+    {
+        GameSummary game = GetGameSummaryById(id);
+
+        var genre = genres.Single(genre => string.Equals(
+            genre.Name,
+            game.Genre,
+            StringComparison.OrdinalIgnoreCase));
+
+        return new GameDetails
+        {
+            Id = game.Id,
+            Name = game.Name,
+            GenreId = genre.Id.ToString(),
+            Price = game.Price,
+            ReleaseDate = game.ReleaseDate
+        };
+
+    }
+
+    public void UpdateGame(GameDetails updatedGame) {
+        var genre = GetGenreById(updatedGame.GenreId);
+
+        // retrieve existing game summary object so that we can update its values
+        GameSummary existingGame = GetGameSummaryById(updatedGame.Id);
+
+        existingGame.Name = updatedGame.Name;
+        existingGame.Genre = genre.Name;
+        existingGame.Price = updatedGame.Price;
+        existingGame.ReleaseDate = updatedGame.ReleaseDate;
+
+    }
+
+
+
+
+    // HELPER METHODS
+    private GameSummary GetGameSummaryById(int id)
+    {
+        GameSummary? game = games.Find(game => game.Id == id);
+        ArgumentNullException.ThrowIfNull(game);
+        return game;
+    }
+
+    private Genre GetGenreById(string? id)
+    {
+        // to make sure if genreId is null, we're just throw an exception & there's no way to go to the next line
+        ArgumentException.ThrowIfNullOrWhiteSpace(id);
+
+        // find genre in genres collection
+        return genres.Single(genre => genre.Id == int.Parse(id));
     }
 }
