@@ -58,4 +58,4 @@ Blazor support 4 render modes:
 
 
 ## Client Side Rendering & Automatic Rendering
-![Image](/images/14-client-side-wasm-automatic-rendering.png)
+![Image](./images/14-client-side-wasm-automatic-rendering.png)

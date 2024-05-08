@@ -39,17 +39,17 @@ Blazor juga memiliki kemampuan untuk berinteraksi dengan DOM (Document Object Mo
 
 
 ## Asynchronous Programming in ASP.NET Core
-![Image](/images/15-asynchronous.png) <br>
+![Image](./images/15-asynchronous.png) <br>
 
 
 ## Stream Rendering
 * [Stream Rendering](https://chrissainty.com/blazor-in-dotnet-8-server-side-and-streaming-rendering/)
 
 Jadi misal kita coba untuk slow down aplikasi kita. Mari coba kasih delay 3s di bagian Backend: <br>
-![Image](/images/16-GamesEndpoints-be.png) <br>
+![Image](./images/16-GamesEndpoints-be.png) <br>
 
 Maka kita bisa menggunakan Stream Rendering untuk menampilkan UI HTML sementara sambil menunggu data berhasil di load dari server, caranya dengan inject stream rendering ke dalam app blazor kita: <br>
-![Image](/images/17-streamrendering-fe.png) <br>
+![Image](./images/17-streamrendering-fe.png) <br>
 
 > Jadi makesure untuk selalu menggunakan Stream Rendering untuk memastikan user experience berjalan dengan lancar
 
@@ -60,20 +60,20 @@ Mari kita disabled dulu `@rendermode InteractiveServer` yang ada di EditGame.Raz
 
 Kalau kita coba untuk edit salah satu game lalu kita save update, maka entire home page got reloaded. <br>
 
-![Image](/images/18-static-form-network.png) <br>
+![Image](./images/18-static-form-network.png) <br>
 
 banyak yang di-load, ga hanya post request dan get request tapi juga file css dan js nya dan lain-lain. Mungkin itu ga terlalu terasa kalau di local, tapi kalau kita deploy app itu, this isn't going to look very nice. It will taking time to load with all the files that are involved.
 
 In static form, there is a nice way to not have to deal with this kind of experience.
 
 Caranya di EditGame Form coba tambahkan: <br>
-![Image](/images/19-enhanced.png)
+![Image](./images/19-enhanced.png)
 <br>
 
 This enhanced attribute is going to enable enhance forms so they can behave in a similar way as a single page application. Only that changes is going to be rendered in the page as opposed to having to reload that entire page.
 
 Result: <br>
-![Image](/images/20-after-enhanced.png) <br>
+![Image](./images/20-after-enhanced.png) <br>
 
 so there is no need to reload the entire set of elements for the page but only we will go ahead and reconstruct the pieces of HTML that change it when we move back into the home component
 
