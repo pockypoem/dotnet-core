@@ -41,3 +41,15 @@ Blazor juga memiliki kemampuan untuk berinteraksi dengan DOM (Document Object Mo
 ## Asynchronous Programming in ASP.NET Core
 ![Image](/images/15-asynchronous.png) <br>
 
+
+## Stream Rendering
+* [Stream Rendering](https://chrissainty.com/blazor-in-dotnet-8-server-side-and-streaming-rendering/)
+
+Jadi misal kita coba untuk slow down aplikasi kita. Mari coba kasih delay 3s di bagian Backend: <br>
+![Image](/images/16-GamesEndpoints-be.png) <br>
+
+Maka kita bisa menggunakan Stream Rendering untuk menampilkan UI HTML sementara sambil menunggu data berhasil di load dari server, caranya dengan inject stream rendering ke dalam app blazor kita: <br>
+![Image](/images/17-streamrendering-fe.png) <br>
+
+> Jadi makesure untuk selalu menggunakan Stream Rendering untuk memastikan user experience berjalan dengan lancar
+

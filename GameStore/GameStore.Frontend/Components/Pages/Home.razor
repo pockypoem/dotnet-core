@@ -1,6 +1,9 @@
 ﻿@page "/"
 @using System.Globalization
 @inject GamesClient Client
+@attribute [StreamRendering]
+@* it's going to allow our blazor application to send back some HTML initially back to the browser until the server is ready*@
+
 
 <PageTitle>Game Catalog</PageTitle>
 

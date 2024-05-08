@@ -16,12 +16,18 @@ public static class GamesEndpoints
                         .WithParameterValidation(); // apply to all endpoints.
 
         // GET /games
-        group.MapGet("/", async (GameStoreContext dbContext) => 
-            await dbContext.Games
+        group.MapGet("/", async (GameStoreContext dbContext) => {
+
+            // add small delay for 3s
+            await Task.Delay(3000);
+
+            return await dbContext.Games
                     .Include(game => game.Genre) // to prevent N + 1 Problem
                     .Select(game => game.ToGameSummaryDto())
                     .AsNoTracking() // don't need tracking of the return entities, just send them back to client
-                    .ToListAsync()); 
+                    .ToListAsync();
+        }); 
+            
 
         // GET /games/1
         group.MapGet("/{id}", async (int id, GameStoreContext dbContext) => {
