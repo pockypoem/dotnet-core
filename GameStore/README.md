@@ -2,6 +2,8 @@
 
 ## Project Info
 
+![Image](display.png) <br>
+
 This is a simple project for a game store. It is called a simple project because it only contains 2 tables in the database, namely the Genre table and the Games table with a one-to-many relationship.
 
 Basically, this project just displays a list of the games that are sold. Then, we can add new game data, then we can change the game data, and even delete the game data.
