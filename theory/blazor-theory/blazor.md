@@ -35,3 +35,9 @@ Blazor juga memiliki kemampuan untuk berinteraksi dengan DOM (Document Object Mo
 ### Seputar Web Assembly
 * [Dokumentasi Web Assembly](https://webassembly.org/)
 * ![Image](./images/05-webassembly.png)
+
+
+
+## Asynchronous Programming in ASP.NET Core
+![Image](/images/15-asynchronous.png) <br>
+
