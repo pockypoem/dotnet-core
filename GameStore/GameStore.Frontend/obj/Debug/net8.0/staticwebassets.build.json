@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gwWCDCWLNzppbf4vcVqZ5H71tEG6lPM+8OxbCC0qdcc=",
+  "Hash": "ZS500GjmvYSJyBm+CwsXVndLQ2azZc0L7GTyFjwFUcI=",
   "Source": "GameStore.Frontend",
   "BasePath": "_content/GameStore.Frontend",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "GameStore.Frontend\\wwwroot",
       "Source": "GameStore.Frontend",
-      "ContentRoot": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\",
+      "ContentRoot": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\",
       "BasePath": "_content/GameStore.Frontend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GameStore.Frontend.styles.css",
+      "Identity": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GameStore.Frontend.styles.css",
       "SourceId": "GameStore.Frontend",
       "SourceType": "Computed",
-      "ContentRoot": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/GameStore.Frontend",
       "RelativePath": "GameStore.Frontend.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GameStore.Frontend.styles.css"
+      "OriginalItemSpec": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GameStore.Frontend.styles.css"
     },
     {
-      "Identity": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css",
+      "Identity": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css",
       "SourceId": "GameStore.Frontend",
       "SourceType": "Computed",
-      "ContentRoot": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/GameStore.Frontend",
       "RelativePath": "GameStore.Frontend.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css"
+      "OriginalItemSpec": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GameStore.Frontend.bundle.scp.css"
     },
     {
-      "Identity": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\app.css",
+      "Identity": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\app.css",
       "SourceId": "GameStore.Frontend",
       "SourceType": "Discovered",
-      "ContentRoot": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\",
+      "ContentRoot": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\wwwroot\\",
       "BasePath": "_content/GameStore.Frontend",
       "RelativePath": "app.css",
       "AssetKind": "All",

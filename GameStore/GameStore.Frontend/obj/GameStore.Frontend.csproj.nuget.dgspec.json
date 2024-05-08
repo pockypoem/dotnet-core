@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj": {}
+    "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj": {}
   },
   "projects": {
-    "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj": {
+    "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
+        "projectUniqueName": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
         "projectName": "GameStore.Frontend",
-        "projectPath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
+        "projectPath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\GameStore.Frontend.csproj",
         "packagesPath": "C:\\Users\\Jeremyas Cornelis\\.nuget\\packages\\",
-        "outputPath": "d:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\",
+        "outputPath": "D:\\ngulik\\speedrun\\dotnet-core\\GameStore\\GameStore.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jeremyas Cornelis\\AppData\\Roaming\\NuGet\\NuGet.Config",
