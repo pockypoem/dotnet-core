@@ -53,3 +53,28 @@ Maka kita bisa menggunakan Stream Rendering untuk menampilkan UI HTML sementara 
 
 > Jadi makesure untuk selalu menggunakan Stream Rendering untuk memastikan user experience berjalan dengan lancar
 
+## Another Concept
+maybe kita akan dealing with static form and this improvement is very essential.
+
+Mari kita disabled dulu `@rendermode InteractiveServer` yang ada di EditGame.Razor. supaya form kita menjadi static.
+
+Kalau kita coba untuk edit salah satu game lalu kita save update, maka entire home page got reloaded. <br>
+
+![Image](/images/18-static-form-network.png) <br>
+
+banyak yang di-load, ga hanya post request dan get request tapi juga file css dan js nya dan lain-lain. Mungkin itu ga terlalu terasa kalau di local, tapi kalau kita deploy app itu, this isn't going to look very nice. It will taking time to load with all the files that are involved.
+
+In static form, there is a nice way to not have to deal with this kind of experience.
+
+Caranya di EditGame Form coba tambahkan: <br>
+![Image](/images/19-enhanced.png)
+<br>
+
+This enhanced attribute is going to enable enhance forms so they can behave in a similar way as a single page application. Only that changes is going to be rendered in the page as opposed to having to reload that entire page.
+
+Result: <br>
+![Image](/images/20-after-enhanced.png) <br>
+
+so there is no need to reload the entire set of elements for the page but only we will go ahead and reconstruct the pieces of HTML that change it when we move back into the home component
+
+But this is the same behaviour that you would observe if you have interactive enable for the form but if you have a static form: you want to make sure that you enable this `Enhance` behaviour cause it will producing a very interactive and nicely loading component
