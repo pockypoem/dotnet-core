@@ -2,7 +2,8 @@
 
 namespace GameStore.Frontend.Clients;
 
-public class GamesClient
+// we are recieving that injected HTTP Client via dependency injection
+public class GamesClient(HttpClient httpClient)
 {
     private readonly List<GameSummary> games = 
     [
@@ -29,7 +30,7 @@ public class GamesClient
         }
     ];
 
-    private readonly Genre[] genres = new GenresClient().GetGenres();
+    private readonly Genre[] genres = new GenresClient(httpClient).GetGenres();
 
     public GameSummary[] GetGames() => [.. games];
 
