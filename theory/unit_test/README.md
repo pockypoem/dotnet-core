@@ -88,3 +88,6 @@ Here are the most popular ones:
 * Cleaner and more intuitive tests
 * Run tests in parallel by default 
 * Used by multiple Microsoft teams (ASP.NET Core, Entity Framework, and others)
+
+-----
+* [Unit Test Frameworks for C#: The Pros and Cons of the Top 3](https://stackify.com/unit-test-frameworks-csharp/)
